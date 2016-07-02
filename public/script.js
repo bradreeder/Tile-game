@@ -26,31 +26,31 @@ gameObj.generateLevel = function generateLevel() {
 };
 gameObj.gameControls = function gameControls(e) {
   switch (e.keyCode) {
-    case 37: {
+    case 37: { // press left arrow-key to move left
       const x = gameObj.currentPosition[0];
       const y = gameObj.currentPosition[1] - 1;
-      gameObj.calculatePosition(x, y);
+      gameObj.movePosition(x, y);
       break;
     }
-    case 38: {
+    case 38: { // press up arrow-key to move up
       const x = gameObj.currentPosition[0] - 1;
       const y = gameObj.currentPosition[1];
-      gameObj.calculatePosition(x, y);
+      gameObj.movePosition(x, y);
       break;
     }
-    case 39: {
+    case 39: { // press right arrow-key to move right
       const x = gameObj.currentPosition[0];
       const y = gameObj.currentPosition[1] + 1;
-      gameObj.calculatePosition(x, y);
+      gameObj.movePosition(x, y);
       break;
     }
-    case 40: {
+    case 40: { // press down arrow-key to move down
       const x = gameObj.currentPosition[0] + 1;
       const y = gameObj.currentPosition[1];
-      gameObj.calculatePosition(x, y);
+      gameObj.movePosition(x, y);
       break;
     }
-    case 13: {
+    case 13: { // press enter to reset the game
       gameObj.gameReset();
       break;
     }
@@ -59,17 +59,23 @@ gameObj.gameControls = function gameControls(e) {
     }
   }
 };
-gameObj.calculatePosition = function calculatePosition(x, y) {
+gameObj.movePosition = function movePosition(x, y) {
   if (level[x][y] && level[x][y] !== 'obstacle' && level[x][y] !== 'explored') {
-    level[gameObj.currentPosition[0]][gameObj.currentPosition[1]] = 'explored';
-    const lastPositionId = gameObj.currentPosition[0].toString() + gameObj.currentPosition[1].toString();
-    const lastPosition = document.getElementById(lastPositionId);
-    lastPosition.className = 'col-1-9 explored';
-    gameObj.currentPosition = [x, y];
-    level[x][y] = 'active';
-    const active = document.getElementById(x.toString() + y.toString());
-    active.className = 'col-1-9 active';
+    gameObj.recalcuateLastPosition();
+    gameObj.recalculateCurrentPosition(x, y);
   } else { return; }
+};
+gameObj.recalcuateLastPosition = function recalculateLastPosition() {
+  level[gameObj.currentPosition[0]][gameObj.currentPosition[1]] = 'explored';
+  const lastPositionId = gameObj.currentPosition[0].toString() + gameObj.currentPosition[1].toString();
+  const lastPosition = document.getElementById(lastPositionId);
+  lastPosition.className = 'col-1-9 explored';
+};
+gameObj.recalculateCurrentPosition = function recalculateCurrentPosition(x, y) {
+  gameObj.currentPosition = [x, y];
+  level[x][y] = 'active';
+  const active = document.getElementById(x.toString() + y.toString());
+  active.className = 'col-1-9 active';
 };
 gameObj.gameReset = function gameReset() {
   /*eslint-disable */
