@@ -1,0 +1,25 @@
+{
+  "name": "tile-game",
+  "version": "1.0.0",
+  "description": "a tile-floor puzzle game",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bradreeder/Tile-game.git"
+  },
+  "keywords": [
+    "puzzles",
+    "games",
+    "mazes"
+  ],
+  "author": "Bradley Reeder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bradreeder/Tile-game/issues"
+  },
+  "homepage": "https://github.com/bradreeder/Tile-game#readme"
+}
