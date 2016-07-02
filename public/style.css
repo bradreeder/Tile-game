@@ -1,3 +1,37 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: pink;
+  background-color: black;
+  margin: 0px;
+}
+
+#game-container {
+  padding: 30px 75px 0px 75px;
+}
+
+.col-1-9 {
+  width: 11.111%;
+  height: 80px;
+  display: inline-block;
+  border-left: 3px solid black;
+}
+
+.active {
+  background-color: blue;
+}
+
+.unexplored {
+  background-color: purple;
+}
+
+.explored {
+  background-color: yellow;
+}
+
+.obstacle {
+  background-color: red;
 }
