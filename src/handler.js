@@ -4,7 +4,7 @@ function handler(req, res) {
   const url = req.url;
   if (url === '/') {
     fs.readFile(`${__dirname}/../public/index.html`, (err, data) => {
-      res.writeHead(200, {'Content-type': 'text/html'});
+      res.writeHead(200, { 'Content-type': 'text/html' });
       res.end(data);
     });
   } else {
