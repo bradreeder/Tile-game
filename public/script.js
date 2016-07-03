@@ -48,13 +48,13 @@ const game = (function (ajax, createLevel) { // eslint-disable-line
     levelMap[currentPosition[0]][currentPosition[1]] = 'explored'; // eslint-disable-line
     const lastPositionId = currentPosition[0].toString() + currentPosition[1].toString();  // eslint-disable-line
     const lastPosition = document.getElementById(lastPositionId);
-    lastPosition.className = 'col-1-9 explored';
+    lastPosition.className = `col-1-${levelMap[0].length} explored`; // eslint-disable-line
   };
   gameObj.recalculateCurrentPosition = function recalculateCurrentPosition(x, y) {
     currentPosition = [x, y]; // eslint-disable-line
     levelMap[x][y] = 'active'; // eslint-disable-line
     const active = document.getElementById(x.toString() + y.toString());
-    active.className = 'col-1-9 active';
+    active.className = `col-1-${levelMap[0].length} active`; // eslint-disable-line
   };
   gameObj.gameReset = function gameReset() {
     gameObj.clearGameContainer();
@@ -67,6 +67,6 @@ const game = (function (ajax, createLevel) { // eslint-disable-line
   };
 
   body.addEventListener('keyup', gameObj.gameControls);
-  window.addEventListener('load', ajax('/level1.txt'));
+  window.addEventListener('load', ajax('/level2.txt'));
 
 }(ajax, createLevel)); // eslint-disable-line
