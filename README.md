@@ -18,7 +18,12 @@ using CSS classes.
 * Level lay-out should be stored on server side and retrieved every time the user
 finishes a level. Currently seems best to model the grid in JS as a 2-d Array.
 
-##Stretch goals
+##Current goals
 
-* For now, I just want to recreate the same levels found in Zelda: Oracle of Ages.
-In time I would consider creating new levels, and new game mechanics.
+* Create intro page with instructions and submit button that starts the game
+* Work on the css and make it beautiful
+* Write front and back-end tests refactoring code as is necessary
+* Add: codeclimate.yml, travis.yml, codecov.yml, and deploy on heroku.
+* We have thus far used the same maps as Zelda: Oracle of Ages. Come up with your own levels that fairly increment in difficulty, and come up with ideas for unique game mechanics.
+
+
