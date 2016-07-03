@@ -22,5 +22,6 @@ stepping on the same tile twice.
 * Write front and back-end tests refactoring code as is necessary
 * Add: codeclimate.yml, travis.yml, codecov.yml, and deploy on heroku.
 * We have thus far used the same maps as Zelda: Oracle of Ages. Come up with your own levels that fairly increment in difficulty, and come up with ideas for unique game mechanics.
+* Responsive mobile-first design
 
 
