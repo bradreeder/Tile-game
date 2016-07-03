@@ -13,6 +13,11 @@ function handler(req, res) {
       res.writeHead(200, { 'Content-type': `text/${ext}` });
       res.end(data);
     });
+  } else if (url.includes('level')) {
+    fs.readFile(`${__dirname + url}`, 'utf8', (err, data) => {
+      res.writeHead(200, { 'Content-type': 'text/plain' });
+      res.end(data);
+    });
   } else {
     res.writeHead(404);
     res.end('<h1>404 -- Page requested cannot be found</h1>');
