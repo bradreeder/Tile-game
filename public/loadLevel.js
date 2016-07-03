@@ -1,5 +1,5 @@
-const ajax = (function (createLevelModule) {  // eslint-disable-line
-  return function XHRRequest(url) {
+const loadLevel = (function (createLevel) {  // eslint-disable-line
+  return function XHRRequest(levelNumber) {
     const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function onReadyStateChange() {
       if (xhr.readyState === 4 && xhr.status === 200) {
@@ -8,10 +8,10 @@ const ajax = (function (createLevelModule) {  // eslint-disable-line
         response.forEach((item) => {
           item !== '/b' ? row.push(item) : (level.push(row), row = []); // eslint-disable-line
         });
-        createLevel.generateLevel(level, url); // eslint-disable-line
+        createLevel.generateLevel(level, levelNumber); // eslint-disable-line
       }
     };
-    xhr.open('GET', url || '/level1.txt');
+    xhr.open('GET', `/level${levelNumber.toString()}.txt`);
     xhr.send();
   };
 }(createLevel)); // eslint-disable-line
