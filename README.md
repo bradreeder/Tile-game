@@ -8,6 +8,8 @@ video-game franchise [The Legend of Zelda](https://en.wikipedia.org/wiki/The_Leg
 A user must navigate a maze-like grid of coloured tiles stepping on each tile once without
 stepping on the same tile twice.
 
+URL: https://evening-reef-36937.herokuapp.com/
+
 ##How?
 
 * txt files representing each level's map grid is stored on and requested from the server.
@@ -24,5 +26,3 @@ stepping on the same tile twice.
 * We have thus far used the same maps as Zelda: Oracle of Ages. Come up with your own levels that fairly increment in difficulty, and come up with ideas for unique game mechanics.
 * Responsive mobile-first design
 * Get it working in other browsers
-
-
