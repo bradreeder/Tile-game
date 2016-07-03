@@ -7,7 +7,7 @@ const createLevel = (function() {  // eslint-disable-line
     level.forEach((row, rowIndex) => {
       row.forEach((item, itemIndex) => {
         const gridBox = document.createElement('div');
-        gridBox.className = `col-1-9 ${item}`;
+        gridBox.className = `col-1-${row.length} ${item}`;
         gridBox.id = `${JSON.stringify(rowIndex) + JSON.stringify(itemIndex)}`;
         gameContainer.appendChild(gridBox);
         if (item === 'active') {

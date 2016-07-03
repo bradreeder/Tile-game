@@ -20,6 +20,20 @@ body {
   border-left: 3px solid black;
 }
 
+.col-1-11 {
+  width: 9.09%;
+  height: 70px;
+  display: inline-block;
+  border-left: 3px solid black;
+}
+
+.col-1-13 {
+  width: 7.69%;
+  height: 60px;
+  display: inline-block;
+  border-left: 3px solid black;
+}
+
 .active {
   background-color: blue;
 }
