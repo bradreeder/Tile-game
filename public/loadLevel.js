@@ -1,17 +1,17 @@
-const loadLevel = (function (createLevel) {  // eslint-disable-line
-  return function XHRRequest(levelNumber) {
+const loadLevel = (function (game) {  // eslint-disable-line
+  game.loadLevel = function requestLevelFromServer (levelNumber) { // eslint-disable-line
     const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function onReadyStateChange() {
       if (xhr.readyState === 4 && xhr.status === 200) {
         const response = xhr.responseText.split('\n');
-        const level = []; let row = [];
+        const levelGrid = []; let gridRow = [];
         response.forEach((item) => {
-          item !== '/b' ? row.push(item) : (level.push(row), row = []); // eslint-disable-line
+          item !== '/b' ? gridRow.push(item) : (levelGrid.push(gridRow), gridRow = []); // eslint-disable-line
         });
-        createLevel.generateLevel(level, levelNumber); // eslint-disable-line
+        game.generateLevelGrid(levelGrid, levelNumber); // eslint-disable-line
       }
     };
     xhr.open('GET', `/level${levelNumber.toString()}.txt`);
     xhr.send();
   };
-}(createLevel)); // eslint-disable-line
+}(game)); // eslint-disable-line
