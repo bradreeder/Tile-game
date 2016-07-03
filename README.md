@@ -10,13 +10,10 @@ stepping on the same tile twice.
 
 ##How?
 
-* Client-side should generate grid of divs.
-* Client-side should have the controls as event listeners
-* The current tile the user is on, tiles that have been stepped on, tiles that
-have not been stepped on, and obstacles should all be indicated by colour and controlled
-using CSS classes.
-* Level lay-out should be stored on server side and retrieved every time the user
-finishes a level. Currently seems best to model the grid in JS as a 2-d Array.
+* txt files representing each level's map grid is stored on and requested from the server.
+* The client-side parses the server's response into a 2-D array that models the map grid, and generates a grid of coloured divs on the html page from it.
+* Each grid-box is individually coloured to either represent an unexplored tile, an explored tile, an obstacle, or the user's current position. The colours are controlled using css classses, and are continually updated as the user moves around the grid.
+* Client-side.js adds event listeners to the html body so that the user can navigate the grid in four directions, and reset the current level by pressing enter.
 
 ##Current goals
 
