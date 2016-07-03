@@ -33,6 +33,10 @@ function handler(req, res) {
         res.end(data);
       }
     });
+  } else if (url === '/favicon.ico') {
+    res.writeHead(200, { 'Content-Type': 'image/x-icon' });
+    console.log('Favicon requested');
+    res.end();
   } else {
     res.writeHead(404);
     res.end('<h1>404 -- Page requested cannot be found</h1>');
