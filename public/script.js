@@ -39,7 +39,7 @@ const game = (function (loadLevel) { // eslint-disable-line
     }
   };
   gameObj.movePosition = function movePosition(x, y) {
-    if (levelMap[x][y]) { // eslint-disable-line
+    if (typeof levelMap[x][y] !== 'undefined') { // eslint-disable-line
       if (levelMap[x][y] !== 'obstacle' && levelMap[x][y] !== 'explored') { // eslint-disable-line
         gameObj.recalcuateLastPosition();
         gameObj.recalculateCurrentPosition(x, y);
