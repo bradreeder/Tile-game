@@ -29,3 +29,4 @@ URL: https://evening-reef-36937.herokuapp.com/
 * Responsive mobile-first design
 * Get it working in other browsers (i.e. get es6 code to work in other browsers)
 * Add quickstart guide to readme: npm install, how to test frontend, how to test backend, how to run in localhost:4000.
+* Add midi audio file, retro themed
