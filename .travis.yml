@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "6"
+notifications:
+  email: false
+cache:
+  directories:
+    - node_modules
+before_script:
+  - npm prune
+script:
+  - npm test
+  - npm run check-coverage
+after_success:
+  - npm run report-coverage
+  - bash <(curl -s https://codecov.io/bash)

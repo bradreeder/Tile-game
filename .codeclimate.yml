@@ -1,0 +1,22 @@
+engines:
+  eslint:
+    enabled: true
+    channel: "eslint-2"
+
+  duplication:
+    enabled: true
+    config:
+      languages:
+        - javascript
+
+  nodesecurity:
+    enabled: false
+
+ratings:
+  paths:
+    - "**.js"
+    - "**.css"
+
+exclude_paths:
+  - "backendTests/"
+  - "node_modules/"

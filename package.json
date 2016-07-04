@@ -4,7 +4,9 @@
   "description": "a tile-floor puzzle game",
   "main": "server.js",
   "scripts": {
-    "test": "nodemon backendTests/handler.test.js",
+    "check-coverage": "istanbul check-coverage --statements 20 --branches 20 --functions 20 --lines 20",
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
+    "test": "istanbul cover tape backendTests/**/*.test.js",
     "start": "nodemon src/server.js"
   },
   "repository": {
@@ -23,12 +25,14 @@
   },
   "homepage": "https://github.com/bradreeder/Tile-game#readme",
   "devDependencies": {
+    "codecov.io": "^0.1.6",
     "eslint": "^2.13.1",
     "eslint-config-airbnb": "^9.0.1",
     "eslint-config-defaults": "^9.0.0",
     "eslint-plugin-import": "^1.9.2",
     "eslint-plugin-jsx-a11y": "^1.5.3",
-    "eslint-plugin-react": "^5.2.2"
+    "eslint-plugin-react": "^5.2.2",
+    "istanbul": "^0.4.4"
   },
   "engines": {
     "node": "6.2.2"
