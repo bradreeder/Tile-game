@@ -6,6 +6,22 @@
 
 # Tile-game
 
+## Quickstart guide
+``` bash
+git clone <repository name>
+cd <repository path>
+npm install
+npm start
+```
+
+And to see the tests:
+``` bash
+npm test
+```
+
+Or you can access the page [here.](https://evening-reef-36937.herokuapp.com/)
+
+
 ##What?
 
 A tile-floor puzzle game influenced by some of the puzzles from the popular
@@ -13,8 +29,6 @@ video-game franchise [The Legend of Zelda](https://en.wikipedia.org/wiki/The_Leg
 
 A user must navigate a maze-like grid of coloured tiles stepping on each tile once without
 stepping on the same tile twice.
-
-URL: https://evening-reef-36937.herokuapp.com/
 
 ##How?
 
@@ -30,9 +44,7 @@ URL: https://evening-reef-36937.herokuapp.com/
 * Write front-end tests refactoring code as is necessary
 * Back-end tests done. Test that the level.txt files have the correct content.
 * Write an algorithm that solves the puzzle, and is able to work out its difficulty, so you can use it to test if a level is solvable and generate random levels.
-* Add: codeclimate.yml, travis.yml, codecov.yml.
 * We have thus far used the same maps as Zelda: Oracle of Ages. Come up with your own levels that fairly increment in difficulty, and come up with ideas for unique game mechanics.
 * Responsive mobile-first design
 * Get it working in other browsers (i.e. get es6 code to work in other browsers)
-* Add quickstart guide to readme: npm install, how to test frontend, how to test backend, how to run in localhost:4000.
 * Add midi audio file, retro themed
