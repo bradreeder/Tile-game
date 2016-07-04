@@ -3,27 +3,19 @@ const addGameControls = (function module(game) {
   game.gameControls = function gameControls(e) {
     switch (e.keyCode) {
       case 37: { // press left arrow-key to move left
-        const x = game.currentPosition[0];
-        const y = game.currentPosition[1] - 1;
-        game.movePosition(x, y);
+        game.movePosition(game.currentPosition[0], game.currentPosition[1] - 1);
         break;
       }
       case 38: { // press up arrow-key to move up
-        const x = game.currentPosition[0] - 1;
-        const y = game.currentPosition[1];
-        game.movePosition(x, y);
+        game.movePosition(game.currentPosition[0] - 1, game.currentPosition[1]);
         break;
       }
       case 39: { // press right arrow-key to move right
-        const x = game.currentPosition[0];
-        const y = game.currentPosition[1] + 1;
-        game.movePosition(x, y);
+        game.movePosition(game.currentPosition[0], game.currentPosition[1] + 1);
         break;
       }
       case 40: { // press down arrow-key to move down
-        const x = game.currentPosition[0] + 1;
-        const y = game.currentPosition[1];
-        game.movePosition(x, y);
+        game.movePosition(game.currentPosition[0] + 1, game.currentPosition[1]);
         break;
       }
       case 13: { // press enter to reset the game
