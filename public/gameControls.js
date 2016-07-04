@@ -74,7 +74,6 @@ const addGameControls = (function module(game) {
       game.loadLevel(game.currentLevel + 1);
     }, 500);
   };
-
   game.isInvalidMove = function isInvalidMove(grid, x, y, xDir, yDir) {
     const newX = x + xDir; const newY = y + yDir;
     return (
