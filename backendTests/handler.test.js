@@ -73,6 +73,13 @@ tape('test get requests to level endpoint', t => {
   });
 });
 
+tape('test get requests handle favicon requests', t => {
+  shot.inject(handler, { method: 'get', url: '/favicon.ico' }, (res) => {
+    t.equal(res.statusCode, 200, '/favicon.ico has status code of 200');
+    t.end();
+  });
+});
+
 tape('throws an error if requested file does not exist', (t) => {
   shot.inject(handler, { method: 'get', url: 'fhsjhdfhjkds' }, (res) => {
     t.equal(res.statusCode, 404, 'fhsjhdfhjkds has status code of 404');
