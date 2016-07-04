@@ -4,7 +4,7 @@
   "description": "a tile-floor puzzle game",
   "main": "server.js",
   "scripts": {
-    "test": "nodemon backendTests/test.js",
+    "test": "nodemon backendTests/handler.test.js",
     "start": "nodemon src/server.js"
   },
   "repository": {
