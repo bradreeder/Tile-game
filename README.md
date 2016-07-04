@@ -1,3 +1,9 @@
+[![Build Status](https://travis-ci.org/bradreeder/Tile-game.svg?branch=master)](https://travis-ci.org/bradreeder/Tile-game)
+
+[![codecov](https://codecov.io/gh/bradreeder/Tile-game/branch/master/graph/badge.svg)](https://codecov.io/gh/bradreeder/Tile-game)
+
+[![Code Climate](https://codeclimate.com/github/bradreeder/Tile-game/badges/gpa.svg)](https://codeclimate.com/github/bradreeder/Tile-game)
+
 # Tile-game
 
 ##What?
