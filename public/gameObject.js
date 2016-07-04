@@ -1,4 +1,4 @@
-const game = (function () { // eslint-disable-line
+const game = (function module() {
   const gameObj = {};
   gameObj.gameContainer = document.getElementById('game-container');
   gameObj.levelMap = [];
@@ -7,3 +7,5 @@ const game = (function () { // eslint-disable-line
   gameObj.tilesLeftToExplore = 0;
   return gameObj;
 }());
+
+window.game = game;

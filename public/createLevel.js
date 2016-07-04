@@ -1,6 +1,7 @@
-const createLevel = (function (game) {  // eslint-disable-line
-  game.generateLevelGrid = function generateLevelGrid (level, levelNo) { // eslint-disable-line
-    game.updateLevel(level, levelNo); // eslint-disable-line
+/* global game */
+const createLevel = (function module(game) {
+  game.generateLevelGrid = function generateLevelGrid(level, levelNo) {
+    game.updateLevel(level, levelNo);
     level.forEach((row, rowIndex) => {
       row.forEach((item, itemIndex) => {
         const gridBox = game.createGridBox(row, rowIndex, item, itemIndex);
@@ -8,25 +9,27 @@ const createLevel = (function (game) {  // eslint-disable-line
           game.updateCurrentPosition(gridBox);
         }
         if (item === 'unexplored') {
-          game.tilesLeftToExplore++; // eslint-disable-line
+          game.tilesLeftToExplore++;
         }
       });
     });
   };
-  game.updateLevel = function updateLevel(level, levelNo) { // eslint-disable-line
-    game.levelGrid = level; // eslint-disable-line
-    game.currentLevel = levelNo; // eslint-disable-line
+  game.updateLevel = function updateLevel(level, levelNo) {
+    game.levelGrid = level;
+    game.currentLevel = levelNo;
   };
-  game.updateCurrentPosition = function updateCurrentPosition(activeGridBox) { // eslint-disable-line
-    game.currentPosition = activeGridBox.id.length === 2 // eslint-disable-line
+  game.updateCurrentPosition = function updateCurrentPosition(activeGridBox) {
+    game.currentPosition = activeGridBox.id.length === 2
       ? [+(activeGridBox.id.charAt(0)), +(activeGridBox.id.charAt(1))]
       : [+(activeGridBox.id.charAt(0)), +(activeGridBox.id.charAt(1) + activeGridBox.id.charAt(2))];
   };
-  game.createGridBox = function createGridBox(row, rowIndex, item, itemIndex) { // eslint-disable-line
+  game.createGridBox = function createGridBox(row, rowIndex, item, itemIndex) {
     const gridBox = document.createElement('div');
     gridBox.className = `col-1-${row.length} ${item}`;
     gridBox.id = `${JSON.stringify(rowIndex) + JSON.stringify(itemIndex)}`;
-    game.gameContainer.appendChild(gridBox); // eslint-disable-line
+    game.gameContainer.appendChild(gridBox);
     return gridBox;
   };
-}(game)); // eslint-disable-line
+}(game));
+
+window.createLevel = createLevel;
