@@ -5,7 +5,7 @@ const createLevel = (function module(game) {
     level.forEach((row, rowIndex) => {
       row.forEach((item, itemIndex) => {
         const gridBox = game.createGridBox(row, rowIndex, item, itemIndex);
-        if (item === 'active') { // if id char ever has 4 characters then refactor
+        if (item === 'active') {
           game.updateCurrentPosition(gridBox);
         }
         if (item === 'unexplored') {
@@ -22,7 +22,7 @@ const createLevel = (function module(game) {
     game.currentPosition = activeGridBox.id.length === 2
       ? [+(activeGridBox.id.charAt(0)), +(activeGridBox.id.charAt(1))]
       : [+(activeGridBox.id.charAt(0)), +(activeGridBox.id.charAt(1) + activeGridBox.id.charAt(2))];
-  };
+  }; // if id char ever has 4 characters then refactor
   game.createGridBox = function createGridBox(row, rowIndex, item, itemIndex) {
     const gridBox = document.createElement('div');
     gridBox.className = `col-1-${row.length} ${item}`;
