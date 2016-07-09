@@ -39,7 +39,7 @@ stepping on the same tile twice.
 * Work on the css and make it beautiful
 * Write front-end tests refactoring code as is necessary
 * Back-end tests done. Test that the level.txt files have the correct content.
-* Write an algorithm that solves the puzzle, and is able to work out its difficulty, so you can use it to test if a level is solvable and generate random levels.
+* Write an algorithm that solves the puzzle, and is able to work out its difficulty, so you can use it to test if a level is solvable and generate random levels. Matt suggested looking into [this](https://www.dropbox.com/sh/4i735vk7rjv4yjs/AACbtNIuilsk9IYzvCMm_ZZNa?dl=0).
 * We have thus far used the same maps as Zelda: Oracle of Ages. Come up with your own levels that fairly increment in difficulty, and come up with ideas for unique game mechanics.
 * Responsive mobile-first design
 * Get it working in other browsers (i.e. get es6 code to work in other browsers)
