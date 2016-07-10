@@ -44,5 +44,8 @@ stepping on the same tile twice.
 * Responsive mobile-first design.
 * Get it working in other browsers (i.e. get es6 code to work in other browsers).
 * Add midi audio file, retro themed.
+
+##Stretch goals
+
 * Come up with idea for a story-mode (?). So far: a 2d square has been inducted into a magical school that is, over the levels, teaching it to manipulate and travel through its 2d world by giving it the ability to access the third dimension. Can introduce puzzles that can only be solved in 2d by going to and solving puzzles in a 3d world. [Flatland](https://en.wikipedia.org/wiki/Flatland) inspired.
 * Ideas related to the above: accessing 3-d in order to teleport in the 2-d world (at first the ability to jump, then larger distances), manipulating the 3-d world in order to directly change the map of the 2-d world (you could, in 3-d, draw a shape that becomes the map in 2-d), mind-controlling over AI to pull switches for you, directly hacking the game-world by using the browser-console, etc. Introduce handicaps the longer you remain in 3d. (?)
