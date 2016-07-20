@@ -43,7 +43,8 @@ stepping on the same tile twice.
 * We have thus far used the same maps as Zelda: Oracle of Ages. Come up with your own levels that fairly increment in difficulty, and come up with ideas for unique game mechanics. So far: ability to teleport, ability to jump, puzzles with multiple stories, puzzles that can only be solved by stepping on certain tiles.
 * Responsive mobile-first design.
 * Get it working in other browsers (i.e. get es6 code to work in other browsers).
-* Add midi audio file, retro themed.
+* Add midi audio file, retro themed. Look into Howler.js.
+* If you ever need a graphics engine look into Pixi.js. Sockets.io for multiplayer (unlikely.)
 
 ##Stretch goals
 
